@@ -1,4 +1,6 @@
 package com.fes.ui_exercise1.model;
+//creating a model class
+
 
 public class User {
     String name, ni, passport, gender, bdate;
