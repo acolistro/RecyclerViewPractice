@@ -1,6 +1,7 @@
 package com.fes.ui_exercise1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +10,10 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     List<User> userList = new ArrayList<>();
+    private RecyclerView rv_users;
+
     // 1 add relevant library
-    private Button btn_create;
+//    private Button btn_create;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setUpRecyclerView() {
-        
+
     }
 
     public void setUpDataSource() {
