@@ -202,7 +202,7 @@ public class RegistrationDetails extends AppCompatActivity implements View.OnCli
         }
 
         if(edtPass.getText().toString().equals(edtConfirm.getText().toString()) == false) {
-            Toast t1= Toast.makeText(getApplicationContext(), "Password and Confirm password should be same",
+            Toast t1= Toast.makeText(getApplicationContext(), "Password and Confirm password must match",
                     Toast.LENGTH_LONG);
             t1.setGravity(Gravity.CENTER, 0, 0);
             t1.show();
