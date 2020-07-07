@@ -9,6 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.fes.ui_exercise1.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     List<User> userList = new ArrayList<>();
     private RecyclerView rv_users;

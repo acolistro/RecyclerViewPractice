@@ -11,13 +11,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fes.ui_exercise1.model.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyUsersViewholder> {
+    private final List<User> list;
+
     public UserAdapter(List<User> list) {
         this.list= list;
     }
 
-    List<User> list= new ArrayList<>();
+    List<User> userList= new ArrayList<>();
+    
+
     @NonNull
     @Override
     public MyUsersViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -29,11 +34,11 @@ class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyUsersViewholder> {
     @Override
     public void onBindViewHolder(@NonNull MyUsersViewholder holder, int position) {
         User user = list.get(position);
-        holder.name.setText(user.getName());
-        holder.ni.setText(user.getNi());
-        holder.pass.setText(user.getPassport());
-        holder.gend.setText(user.getGender());
-        holder.bdate.setText(user.getBdate());
+        holder.tvName.setText(user.getName());
+        holder.tvNi.setText(user.getNi());
+        holder.tvPass.setText(user.getPassport());
+        holder.tvGend.setText(user.getGender());
+        holder.tvBdate.setText(user.getBdate());
 
     }
 
