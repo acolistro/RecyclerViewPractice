@@ -1,10 +1,60 @@
 package com.fes.ui_exercise1;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class UserAdapter extends RecyclerView.Adapter {
+import com.fes.ui_exercise1.model.User;
+
+import java.util.ArrayList;
+
+class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyUsersViewholder> {
+    public UserAdapter(List<User> list) {
+        this.list= list;
+    }
+
+    List<User> list= new ArrayList<>();
+    @NonNull
+    @Override
+    public MyUsersViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_users, parent, false);
+        MyUsersViewholder myUsersViewholder = new MyUsersViewholder(view);
+        return myUsersViewholder;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyUsersViewholder holder, int position) {
+        User user = list.get(position);
+        holder.name.setText(user.getName());
+        holder.ni.setText(user.getNi());
+        holder.pass.setText(user.getPassport());
+        holder.gend.setText(user.getGender());
+        holder.bdate.setText(user.getBdate());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
 
     //create a class that extends a viewholder
-    public UserAdapter(List<User> userList) {
+
+    class MyUsersViewholder extends RecyclerView.ViewHolder {
+
+        TextView tvName, tvNi, tvPass, tvGend, tvBdate;
+        public MyUsersViewholder(@NonNull View itemView) {
+            super(itemView);
+            tvName= itemView.findViewById(R.id.tvName);
+            tvNi= itemView.findViewById(R.id.tvNi);
+            tvPass= itemView.findViewById(R.id.tvPass);
+            tvGend= itemView.findViewById(R.id.tvGend);
+            tvBdate= itemView.findViewById(R.id.tvBdate);
+        }
     }
+
 }
