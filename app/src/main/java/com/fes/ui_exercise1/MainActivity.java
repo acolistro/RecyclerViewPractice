@@ -1,6 +1,7 @@
 package com.fes.ui_exercise1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -23,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setUpRecyclerView() {
-
+        rv_users= findViewById(R.id.rv_users);
+        rv_users.setLayoutManager(new LinearLayoutManager(this));
+        rv_users.setHasFixedSize(true);
+        rv_users.setAdapter(new UserAdapter(userList));
     }
 
     public void setUpDataSource() {

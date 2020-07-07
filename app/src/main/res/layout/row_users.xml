@@ -7,6 +7,25 @@
     <TextView android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+    </TextView>
 
+    <TextView android:id="@+id/tvNi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView android:id="@+id/tvPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView android:id="@+id/tvGend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView android:id="@+id/tvBday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     </TextView>
 </LinearLayout>
